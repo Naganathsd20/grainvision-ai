@@ -34,8 +34,10 @@ yarn-error.log*
 .DS_Store
 
 # Datasets & Heavy ML Artifacts
-ml/dataset/*
-!ml/dataset/.gitkeep
+ml/dataset/raw/*
+!ml/dataset/raw/.gitkeep
+ml/dataset/processed/*
+!ml/dataset/processed/.gitkeep
 models/*.h5
 models/*.keras
 models/*.pth
@@ -43,6 +45,7 @@ models/*.onnx
 !models/.gitkeep
 results/*
 !results/.gitkeep
+!results/*.png
 
 # Jupyter Notebook Checkpoints
 .ipynb_checkpoints/

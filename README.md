@@ -1,13 +1,13 @@
 # GrainVision AI — Rice Grain Quality Classification Using Deep Learning
 
-![Project Status](https://img.shields.io/badge/Status-Phase%201%20--%20Project%20Foundation-blue)
+![Project Status](https://img.shields.io/badge/Status-Phase%202%20--%20Dataset%20Preparation-green)
 ![Python](https://img.shields.io/badge/Python-3.9%2B-green)
 ![Flask](https://img.shields.io/badge/Backend-Flask-black)
 ![React](https://img.shields.io/badge/Frontend-React%20%2B%20Vite-cyan)
 ![TensorFlow](https://img.shields.io/badge/DL%20Framework-TensorFlow%2FKeras-orange)
 
-> **Current Status: Phase 1 — Project Foundation**  
-> *Note: Model training and dataset processing will take place in subsequent phases (Phases 2–5).*
+> **Current Status: Phase 2 — Dataset Preparation**  
+> *Note: Model preprocessing pipelines, architecture definition, and training take place in subsequent phases (Phases 3–5).*
 
 ---
 
@@ -20,6 +20,23 @@
 ## 🎯 Problem Statement
 
 Manual classification of rice grain varieties is labor-intensive, time-consuming, and subject to subjective human error. Quality control in agricultural processing requires rapid, reproducible, and accurate variety identification to ensure market compliance, fair pricing, and automated sorting. Deep Learning visual inspection provides an accurate, automated solution to categorize grain types in real time.
+
+---
+
+## 🌾 Phase 2 — Dataset Preparation
+
+The dataset pipeline is fully configured for the **Rice Image Dataset** (Koklu et al., 2021):
+
+- **Target Classes (5 Categories)**: *Arborio, Basmati, Ipsala, Jasmine, Karacadag*.
+- **Official Source**: [Kaggle — Rice Image Dataset](https://www.kaggle.com/datasets/muratkokludataset/rice-image-dataset) (75,000 images, 15,000 per class).
+- **Directory Layout**:
+  - `ml/dataset/raw/`: Raw image subfolders for the 5 classes.
+  - `ml/dataset/processed/`: Reproducible 70% Train, 15% Validation, 15% Test splits.
+  - `ml/dataset/metadata/`: CSV manifests, JSON summaries, and verification reports.
+- **Validation & Duplicate Checking**: Automated file verification (`verify_dataset.py`) and MD5 cryptographic hashing (`check_duplicates.py`).
+- **Reproducible Split**: Stratified sampling using fixed random seed `42`.
+
+For complete download instructions and pipeline details, see [ml/dataset/README.md](file:///f:/grainvision-ai/ml/dataset/README.md).
 
 ---
 
@@ -103,8 +120,12 @@ grainvision-ai/
 │   └── vite.config.js        # Vite bundler configuration
 │
 ├── ml/                       # Machine Learning codebase
-│   ├── dataset/              # Raw & split dataset storage (git-ignored)
-│   ├── preprocessing/        # Data pipelines & augmentation scripts
+│   ├── dataset/              # Raw, processed splits, and metadata
+│   │   ├── raw/              # Raw image folders (git-ignored)
+│   │   ├── processed/        # 70/15/15 train/val/test splits (git-ignored)
+│   │   ├── metadata/         # Summary JSON, CSV manifest, charts
+│   │   └── README.md         # Dataset setup documentation
+│   ├── preprocessing/        # Dataset verification, duplicate, split scripts
 │   ├── training/             # Model training pipelines & callbacks
 │   ├── evaluation/           # Evaluation metrics, confusion matrix, plots
 │   └── notebooks/            # Exploratory analysis & experiments
@@ -121,39 +142,38 @@ grainvision-ai/
 
 ## ⚡ Quick Start & Development Setup
 
-### 1. Backend Setup (Flask)
+### 1. Dataset Preparation Setup
 
 ```bash
-# Navigate to backend or root
+# Run verification script
+python ml/preprocessing/verify_dataset.py
+
+# Run duplicate checker
+python ml/preprocessing/check_duplicates.py
+
+# Perform 70/15/15 train/val/test split (Seed 42)
+python ml/preprocessing/split_dataset.py
+
+# Generate distribution reports & sample plots
+python ml/preprocessing/generate_reports.py
+python ml/preprocessing/visualize_samples.py
+```
+
+### 2. Backend Setup (Flask)
+
+```bash
 cd backend
-
-# Create virtual environment (optional but recommended)
-python -m venv venv
-# On Windows:
-venv\Scripts\activate
-# On macOS/Linux:
-source venv/bin/activate
-
-# Install dependencies
-pip install -r ../requirements.txt
-
-# Run Flask server
 python app.py
 ```
 
 Backend will start at: `http://localhost:5000`  
 Test Health API: `http://localhost:5000/api/health`
 
-### 2. Frontend Setup (React + Vite)
+### 3. Frontend Setup (React + Vite)
 
 ```bash
-# Navigate to frontend
 cd frontend
-
-# Install Node dependencies
 npm install
-
-# Start development server
 npm run dev
 ```
 
@@ -163,8 +183,8 @@ Frontend will start at: `http://localhost:5173`
 
 ## 📌 Project Roadmap
 
-- [x] **Phase 1: Project Foundation** *(Current)*
-- [ ] **Phase 2: Dataset Preparation**
+- [x] **Phase 1: Project Foundation**
+- [x] **Phase 2: Dataset Preparation** *(Current)*
 - [ ] **Phase 3: Data Preprocessing**
 - [ ] **Phase 4: Deep Learning Model Architecture**
 - [ ] **Phase 5: Model Training & Tuning**

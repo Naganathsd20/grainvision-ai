@@ -1,0 +1,11 @@
+{
+  "dataset_path": "F:\\grainvision-ai\\ml\\dataset\\raw",
+  "total_images": 0,
+  "valid_images": 0,
+  "invalid_corrupt_images": 0,
+  "empty_files": 0,
+  "classes_found": [],
+  "images_per_class": {},
+  "corrupt_files_list": [],
+  "image_dimensions": {}
+}

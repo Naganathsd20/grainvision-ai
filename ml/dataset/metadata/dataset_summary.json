@@ -1,0 +1,20 @@
+{
+  "project": "GrainVision AI",
+  "subtitle": "Intelligent Rice Grain Classification Using Deep Learning",
+  "phase": "Phase 2 - Dataset Preparation",
+  "classes": [
+    "Arborio",
+    "Basmati",
+    "Ipsala",
+    "Jasmine",
+    "Karacadag"
+  ],
+  "total_raw_images": 0,
+  "raw_class_counts": {
+    "Arborio": 0,
+    "Basmati": 0,
+    "Ipsala": 0,
+    "Jasmine": 0,
+    "Karacadag": 0
+  }
+}
