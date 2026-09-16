@@ -1,13 +1,13 @@
 # GrainVision AI — Rice Grain Quality Classification Using Deep Learning
 
-![Project Status](https://img.shields.io/badge/Status-Phase%203%20--%20Data%20Preprocessing-green)
+![Project Status](https://img.shields.io/badge/Status-Phase%204%20--%20Deep%20Learning%20Model-green)
 ![Python](https://img.shields.io/badge/Python-3.9%2B-green)
 ![Flask](https://img.shields.io/badge/Backend-Flask-black)
 ![React](https://img.shields.io/badge/Frontend-React%20%2B%20Vite-cyan)
 ![TensorFlow](https://img.shields.io/badge/DL%20Framework-TensorFlow%2FKeras-orange)
 
-> **Current Status: Phase 3 — Data Preprocessing (COMPLETE)**  
-> *Note: Model architecture definition and training take place in subsequent phases (Phases 4–5).*
+> **Current Status: Phase 4 — Deep Learning Model Architecture (COMPLETE)**  
+> *Note: Model training and evaluation take place in subsequent phases (Phases 5–6).*
 
 ---
 
@@ -51,6 +51,20 @@ The preprocessing pipeline (`ml/preprocessing/`) builds modular TensorFlow/Keras
 - **10-Point Verification**: Automated pipeline testing (`verify_preprocessing.py`) and visual comparison output (`visualize_preprocessing.py`).
 
 For complete technical documentation, see [ml/preprocessing/README.md](file:///f:/grainvision-ai/ml/preprocessing/README.md).
+
+---
+
+## 🧠 Phase 4 — Deep Learning Model Architecture
+
+The model module (`ml/model/`) defines the transfer learning architecture using MobileNetV2:
+
+- **Backbone**: `MobileNetV2` pre-trained on ImageNet (`include_top=False`, `weights="imagenet"`).
+- **Freezing Strategy**: Initial backbone frozen (`base_model.trainable = False`) to preserve pre-trained features.
+- **Classification Head**: `GlobalAveragePooling2D` → `BatchNormalization` → `Dense(256, ReLU)` → `Dropout(0.3)` → `Dense(5, Softmax)`.
+- **Compilation**: Compiled with `Adam` optimizer (`lr=0.001`), `sparse_categorical_crossentropy` loss, and `accuracy` metric.
+- **10-Point Verification**: Architecture verified via `verify_model.py` with dummy and real Phase 3 batch forward passes. Summary exported to `results/model_summary.txt`.
+
+For complete technical documentation, see [ml/model/README.md](file:///f:/grainvision-ai/ml/model/README.md).
 
 ---
 
@@ -200,7 +214,7 @@ Frontend will start at: `http://localhost:5173`
 - [x] **Phase 1: Project Foundation**
 - [x] **Phase 2: Dataset Preparation**
 - [x] **Phase 3: Data Preprocessing**
-- [ ] **Phase 4: Deep Learning Model Architecture**
+- [x] **Phase 4: Deep Learning Model Architecture**
 - [ ] **Phase 5: Model Training & Tuning**
 - [ ] **Phase 6: Model Evaluation & Metrics**
 - [ ] **Phase 7: Backend & Prediction API**
