@@ -1,13 +1,13 @@
 # GrainVision AI — Rice Grain Quality Classification Using Deep Learning
 
-![Project Status](https://img.shields.io/badge/Status-Phase%207%20--%20Backend%20%26%20Prediction%20API-green)
+![Project Status](https://img.shields.io/badge/Status-Phase%209%20--%20Integration%20%26%20Testing-green)
 ![Python](https://img.shields.io/badge/Python-3.9%2B-green)
 ![Flask](https://img.shields.io/badge/Backend-Flask-black)
 ![React](https://img.shields.io/badge/Frontend-React%20%2B%20Vite-cyan)
 ![TensorFlow](https://img.shields.io/badge/DL%20Framework-TensorFlow%2FKeras-orange)
 
-> **Current Status: Phase 7 — Backend & Prediction API (COMPLETE)**  
-> *Note: React Web Application development (Phase 8) takes place in the next phase.*
+> **Current Status: Phase 9 — Integration & Testing (COMPLETE)**  
+> *Note: End-to-end system integration and testing are fully verified across all components.*
 
 ---
 
@@ -218,8 +218,8 @@ Frontend will start at: `http://localhost:5173`
 - [x] **Phase 5: Model Training & Tuning**
 - [x] **Phase 6: Model Evaluation & Metrics**
 - [x] **Phase 7: Backend & Prediction API**
-- [ ] **Phase 8: Frontend Web Application**
-- [ ] **Phase 9: Integration & End-to-End Testing**
+- [x] **Phase 8: Frontend Web Application**
+- [x] **Phase 9: Integration & End-to-End Testing**
 - [ ] **Phase 10: Deployment & Portfolio Presentation**
 
 ---
