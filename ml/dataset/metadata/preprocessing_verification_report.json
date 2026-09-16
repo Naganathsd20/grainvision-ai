@@ -1,0 +1,32 @@
+{
+  "dataset_mode": "REAL",
+  "target_image_size": [
+    224,
+    224
+  ],
+  "target_channels": 3,
+  "configured_batch_size": 32,
+  "num_classes": 5,
+  "class_mapping": {
+    "Arborio": 0,
+    "Basmati": 1,
+    "Ipsala": 2,
+    "Jasmine": 3,
+    "Karacadag": 4
+  },
+  "checks": {
+    "1_five_classes_detected": "PASS",
+    "2_images_load_correctly": "PASS",
+    "3_image_size_224x224": "PASS",
+    "4_rgb_channels_3": "PASS",
+    "5_pixel_normalization_0_1": "PASS",
+    "6_training_augmentation_enabled": "PASS",
+    "7_validation_augmentation_disabled": "PASS",
+    "8_test_augmentation_disabled": "PASS",
+    "9_batch_size_configurable": "PASS",
+    "10_valid_labels_0_to_4": "PASS"
+  },
+  "passed_checks": 10,
+  "total_checks": 10,
+  "pipeline_status": "PASS"
+}

@@ -1,13 +1,13 @@
 # GrainVision AI — Rice Grain Quality Classification Using Deep Learning
 
-![Project Status](https://img.shields.io/badge/Status-Phase%202%20--%20Dataset%20Preparation-green)
+![Project Status](https://img.shields.io/badge/Status-Phase%203%20--%20Data%20Preprocessing-green)
 ![Python](https://img.shields.io/badge/Python-3.9%2B-green)
 ![Flask](https://img.shields.io/badge/Backend-Flask-black)
 ![React](https://img.shields.io/badge/Frontend-React%20%2B%20Vite-cyan)
 ![TensorFlow](https://img.shields.io/badge/DL%20Framework-TensorFlow%2FKeras-orange)
 
-> **Current Status: Phase 2 — Dataset Preparation**  
-> *Note: Model preprocessing pipelines, architecture definition, and training take place in subsequent phases (Phases 3–5).*
+> **Current Status: Phase 3 — Data Preprocessing (COMPLETE)**  
+> *Note: Model architecture definition and training take place in subsequent phases (Phases 4–5).*
 
 ---
 
@@ -37,6 +37,20 @@ The dataset pipeline is fully configured for the **Rice Image Dataset** (Koklu e
 - **Reproducible Split**: Stratified sampling using fixed random seed `42`.
 
 For complete download instructions and pipeline details, see [ml/dataset/README.md](file:///f:/grainvision-ai/ml/dataset/README.md).
+
+---
+
+## ⚙️ Phase 3 — Data Preprocessing
+
+The preprocessing pipeline (`ml/preprocessing/`) builds modular TensorFlow/Keras `tf.data` input pipelines:
+
+- **Image Geometry**: `224 × 224` pixels, 3 RGB channels (`IMAGE_SIZE = (224, 224)`).
+- **Pixel Normalization**: Scaled from `[0, 255]` to `[0.0, 1.0]` (`Rescaling(1./255)`).
+- **Batching & Performance**: Configurable `BATCH_SIZE = 32`, fixed `SEED = 42`, parallel loading with `AUTOTUNE` prefetching.
+- **Training Data Augmentation**: Training-only transformations (Random Rotation ±5%, Horizontal Flip, Random Zoom ±10%, Random Translation ±5%). Validation and test sets remain unaugmented.
+- **10-Point Verification**: Automated pipeline testing (`verify_preprocessing.py`) and visual comparison output (`visualize_preprocessing.py`).
+
+For complete technical documentation, see [ml/preprocessing/README.md](file:///f:/grainvision-ai/ml/preprocessing/README.md).
 
 ---
 
@@ -184,8 +198,8 @@ Frontend will start at: `http://localhost:5173`
 ## 📌 Project Roadmap
 
 - [x] **Phase 1: Project Foundation**
-- [x] **Phase 2: Dataset Preparation** *(Current)*
-- [ ] **Phase 3: Data Preprocessing**
+- [x] **Phase 2: Dataset Preparation**
+- [x] **Phase 3: Data Preprocessing**
 - [ ] **Phase 4: Deep Learning Model Architecture**
 - [ ] **Phase 5: Model Training & Tuning**
 - [ ] **Phase 6: Model Evaluation & Metrics**

@@ -1,7 +1,12 @@
 {
   "project": "GrainVision AI",
-  "subtitle": "Intelligent Rice Grain Classification Using Deep Learning",
-  "phase": "Phase 2 - Dataset Preparation",
+  "random_seed": 42,
+  "split_ratio": {
+    "train": 0.7,
+    "validation": 0.15,
+    "test": 0.15
+  },
+  "total_images": 75000,
   "classes": [
     "Arborio",
     "Basmati",
@@ -9,12 +14,41 @@
     "Jasmine",
     "Karacadag"
   ],
-  "total_raw_images": 0,
-  "raw_class_counts": {
-    "Arborio": 0,
-    "Basmati": 0,
-    "Ipsala": 0,
-    "Jasmine": 0,
-    "Karacadag": 0
+  "split_counts": {
+    "train": 52500,
+    "validation": 11250,
+    "test": 11250
+  },
+  "class_distribution": {
+    "Arborio": {
+      "train": 10500,
+      "validation": 2250,
+      "test": 2250,
+      "total": 15000
+    },
+    "Basmati": {
+      "train": 10500,
+      "validation": 2250,
+      "test": 2250,
+      "total": 15000
+    },
+    "Ipsala": {
+      "train": 10500,
+      "validation": 2250,
+      "test": 2250,
+      "total": 15000
+    },
+    "Jasmine": {
+      "train": 10500,
+      "validation": 2250,
+      "test": 2250,
+      "total": 15000
+    },
+    "Karacadag": {
+      "train": 10500,
+      "validation": 2250,
+      "test": 2250,
+      "total": 15000
+    }
   }
 }
