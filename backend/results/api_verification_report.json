@@ -1,0 +1,66 @@
+{
+  "timestamp": "2026-09-16 19:25:02",
+  "phase": "Phase 7 - Backend & Prediction API",
+  "passed_tests": 4,
+  "total_tests": 4,
+  "tests": [
+    {
+      "test_name": "GET /api/health",
+      "status_code": 200,
+      "passed": true,
+      "response": {
+        "classes": [
+          "Arborio",
+          "Basmati",
+          "Ipsala",
+          "Jasmine",
+          "Karacadag"
+        ],
+        "phase": "Phase 7 - Backend & Prediction API",
+        "project": "GrainVision AI",
+        "status": "ok",
+        "subtitle": "Intelligent Rice Grain Classification Using Deep Learning",
+        "timestamp": 1789566902,
+        "version": "1.0.0"
+      }
+    },
+    {
+      "test_name": "POST /api/predict (Valid Real Image)",
+      "status_code": 200,
+      "passed": true,
+      "test_image_used": "F:\\grainvision-ai\\ml\\dataset\\processed\\test\\Arborio\\Arborio (10002).jpg",
+      "response": {
+        "prediction": {
+          "class": "Arborio",
+          "confidence": 0.8386
+        },
+        "probabilities": {
+          "Arborio": 0.8386,
+          "Basmati": 0.0007,
+          "Ipsala": 0.0717,
+          "Jasmine": 0.0874,
+          "Karacadag": 0.0016
+        },
+        "success": true
+      }
+    },
+    {
+      "test_name": "POST /api/predict (Missing Image Error)",
+      "status_code": 400,
+      "passed": true,
+      "response": {
+        "error": "No image file provided. Please send a multipart/form-data request with field name 'image'.",
+        "success": false
+      }
+    },
+    {
+      "test_name": "POST /api/predict (Unsupported Format Error)",
+      "status_code": 415,
+      "passed": true,
+      "response": {
+        "error": "Unsupported image format. Allowed formats: JPEG, JPG, PNG, WEBP.",
+        "success": false
+      }
+    }
+  ]
+}
