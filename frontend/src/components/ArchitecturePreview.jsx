@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Image as ImageIcon, Server, Cpu, BarChart3, CheckCircle, Clock } from 'lucide-react';
+import { ArrowRight, Image as ImageIcon, Server, Cpu, BarChart3, CheckCircle } from 'lucide-react';
 
 const pipelineSteps = [
   {
@@ -8,7 +8,7 @@ const pipelineSteps = [
     subtitle: 'JPG / PNG Grain Image',
     desc: 'Interactive UI with drag-and-drop & file validation',
     icon: ImageIcon,
-    status: 'Ready (Frontend Phase 1)',
+    status: 'Ready (Client Validation)',
     active: true,
   },
   {
@@ -17,17 +17,17 @@ const pipelineSteps = [
     subtitle: 'JSON & File Transfer',
     desc: 'Receives request, CORS enabled, passes image payload',
     icon: Server,
-    status: 'Ready (Backend Phase 1)',
+    status: 'Ready (REST Server)',
     active: true,
   },
   {
     step: '03',
     title: 'Deep Learning Model',
-    subtitle: 'MobileNetV2 CNN',
+    subtitle: 'MobileNetV2 CNN (8 Classes)',
     desc: 'Image resizing (224x224), feature extraction & Softmax',
     icon: Cpu,
-    status: 'To be implemented in Phase 4',
-    active: false,
+    status: 'Active (MobileNetV2 8-Class)',
+    active: true,
   },
   {
     step: '04',
@@ -35,8 +35,8 @@ const pipelineSteps = [
     subtitle: 'Variety + Confidence',
     desc: 'Displays top class & percentage confidence distribution',
     icon: BarChart3,
-    status: 'To be connected in Phase 7/8',
-    active: false,
+    status: 'Active (Live Prediction API)',
+    active: true,
   },
 ];
 
@@ -83,15 +83,9 @@ export default function ArchitecturePreview() {
                 </div>
 
                 <div className="mt-4 pt-3 border-t border-slate-800/60 flex items-center gap-1.5 text-[11px] font-mono">
-                  {item.active ? (
-                    <span className="text-emerald-400 flex items-center gap-1 font-semibold">
-                      <CheckCircle className="w-3 h-3" /> {item.status}
-                    </span>
-                  ) : (
-                    <span className="text-amber-400/80 flex items-center gap-1">
-                      <Clock className="w-3 h-3" /> {item.status}
-                    </span>
-                  )}
+                  <span className="text-emerald-400 flex items-center gap-1 font-semibold">
+                    <CheckCircle className="w-3 h-3" /> {item.status}
+                  </span>
                 </div>
               </div>
 

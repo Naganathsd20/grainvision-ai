@@ -6,7 +6,7 @@
   body {
     background-color: #080d1a;
     color: #f1f5f9;
-    font-family: 'Outfit', 'Inter', sans-serif;
+    font-family: 'Outfit', 'Inter', 'Noto Sans Devanagari', 'Noto Sans Kannada', system-ui, -apple-system, sans-serif;
     overflow-x: hidden;
   }
 }
