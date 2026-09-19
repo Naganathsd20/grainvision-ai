@@ -1,72 +1,32 @@
 import React from 'react';
-import { Sparkles } from 'lucide-react';
+import { Sprout } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
 
 export default function ClassCard() {
   const { t } = useLanguage();
 
   const riceClasses = [
-    {
-      name: 'Arborio',
-      descKey: 'arborioDesc',
-      color: 'from-amber-500/20 to-orange-500/5',
-      accentColor: 'text-amber-400'
-    },
-    {
-      name: 'Basmati',
-      descKey: 'basmatiDesc',
-      color: 'from-emerald-500/20 to-teal-500/5',
-      accentColor: 'text-emerald-400'
-    },
-    {
-      name: 'HMT (Sona Masuri)',
-      descKey: 'hmtDesc',
-      color: 'from-yellow-500/20 to-amber-500/5',
-      accentColor: 'text-yellow-400'
-    },
-    {
-      name: 'Ipsala',
-      descKey: 'ipsalaDesc',
-      color: 'from-cyan-500/20 to-blue-500/5',
-      accentColor: 'text-cyan-400'
-    },
-    {
-      name: 'Jasmine',
-      descKey: 'jasmineDesc',
-      color: 'from-purple-500/20 to-indigo-500/5',
-      accentColor: 'text-purple-400'
-    },
-    {
-      name: 'Jhili',
-      descKey: 'jhiliDesc',
-      color: 'from-sky-500/20 to-cyan-500/5',
-      accentColor: 'text-sky-400'
-    },
-    {
-      name: 'Karacadag',
-      descKey: 'karacadagDesc',
-      color: 'from-rose-500/20 to-pink-500/5',
-      accentColor: 'text-rose-400'
-    },
-    {
-      name: 'Masuri',
-      descKey: 'masuriDesc',
-      color: 'from-orange-500/20 to-red-500/5',
-      accentColor: 'text-orange-400'
-    }
+    { name: 'Arborio', descKey: 'arborioDesc' },
+    { name: 'Basmati', descKey: 'basmatiDesc' },
+    { name: 'HMT (Sona Masuri)', descKey: 'hmtDesc' },
+    { name: 'Ipsala', descKey: 'ipsalaDesc' },
+    { name: 'Jasmine', descKey: 'jasmineDesc' },
+    { name: 'Jhili', descKey: 'jhiliDesc' },
+    { name: 'Karacadag', descKey: 'karacadagDesc' },
+    { name: 'Masuri', descKey: 'masuriDesc' }
   ];
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-2 border-b border-slate-800 pb-4">
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-2 border-b border-slate-200 pb-4">
         <div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight flex items-center gap-3">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight flex items-center gap-3">
             {t('varietiesTitle')}
-            <span className="text-xs px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-medium">
+            <span className="text-xs px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200/80 font-semibold">
               {t('supportedCount')}
             </span>
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base mt-1">
+          <p className="text-slate-600 text-sm sm:text-base mt-1">
             {t('varietiesSubtitle')}
           </p>
         </div>
@@ -76,20 +36,23 @@ export default function ClassCard() {
         {riceClasses.map((rice) => (
           <div
             key={rice.name}
-            className={`glass-card glass-card-hover rounded-2xl p-5 sm:p-6 border border-slate-800 flex flex-col justify-between bg-gradient-to-b ${rice.color} transition-all duration-300 h-full`}
+            className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/80 flex flex-col justify-between shadow-sm hover:shadow-md hover:border-emerald-300 transition-all duration-200"
           >
             <div className="space-y-3">
-              <div className="flex items-center justify-end">
-                <Sparkles className={`w-4 h-4 ${rice.accentColor}`} />
+              <div className="flex items-center justify-between">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200/60">
+                  Variety
+                </span>
+                <Sprout className="w-4 h-4 text-emerald-600" />
               </div>
 
               <div>
-                <h3 className={`text-xl sm:text-2xl font-extrabold ${rice.accentColor} tracking-wide`}>
+                <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight">
                   {rice.name}
                 </h3>
               </div>
 
-              <p className="text-xs sm:text-sm text-slate-400 leading-relaxed pt-1">
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pt-1">
                 {t(rice.descKey)}
               </p>
             </div>

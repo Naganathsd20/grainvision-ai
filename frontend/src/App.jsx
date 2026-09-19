@@ -43,7 +43,7 @@ export default function App() {
 
   return (
     <LanguageProvider>
-      <div className="min-h-screen flex flex-col bg-slate-950 text-slate-100 font-sans selection:bg-emerald-500/30 selection:text-emerald-300">
+      <div className="min-h-screen flex flex-col bg-[#f8faf7] text-slate-800 font-sans selection:bg-emerald-100 selection:text-emerald-800">
         {/* GLOBAL NAVBAR */}
         <Header currentPath={currentPath} navigate={navigate} />
 

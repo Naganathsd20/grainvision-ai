@@ -32,8 +32,8 @@ export const translations = {
     overviewText: "GrainVision AI makes it simple to identify rice varieties using a photograph. Upload an image, let the system analyze the visible characteristics of the grains, and receive an estimated variety with a confidence level.",
 
     // Rice Varieties
-    varietiesTitle: "Supported Rice Varieties",
-    varietiesSubtitle: "Explore the 8 rice varieties GrainVision AI can identify.",
+    varietiesTitle: "Supported Rice Types",
+    varietiesSubtitle: "Explore the rice types GrainVision AI can identify.",
     btnViewAllVarieties: "View All Varieties",
 
     // Home - How It Works Preview
@@ -211,8 +211,8 @@ export const translations = {
     overviewText: "GrainVision AI फोटो के ज़रिए चावल की किस्मों को पहचानना आसान बनाता है। एक फोटो अपलोड करें, सिस्टम को दानों की विशेषताओं का विश्लेषण करने दें, और विश्वास स्तर के साथ अनुमानित किस्म प्राप्त करें।",
 
     // Rice Varieties
-    varietiesTitle: "समर्थित चावल की किस्में",
-    varietiesSubtitle: "जानें कि GrainVision AI किन 8 चावल किस्मों की पहचान कर सकता है।",
+    varietiesTitle: "समर्थित चावल के प्रकार",
+    varietiesSubtitle: "उन प्रकार के चावलों को एक्सप्लोर करें जिन्हें GrainVision AI पहचान सकता है।",
     btnViewAllVarieties: "सभी किस्में देखें",
 
     // Home - How It Works Preview
@@ -390,8 +390,8 @@ export const translations = {
     overviewText: "GrainVision AI ಫೋಟೋ ಮೂಲಕ ಅಕ್ಕಿಯ ವಿಧಗಳನ್ನು ಗುರುತಿಸುವುದನ್ನು ಸರಳಗೊಳಿಸುತ್ತದೆ. ಒಂದು ಚಿತ್ರವನ್ನು ಅಪ್ಲೋಡ್ ಮಾಡಿ, ಸಿಸ್ಟಮ್ ಕಾಳುಗಳ ಗೋಚರ ಲಕ್ಷಣಗಳನ್ನು ವಿಶ್ಲೇಷಿಸಲು ಬಿಡಿ ಮತ್ತು ವಿಶ್ವಾಸ ಮಟ್ಟದೊಂದಿಗೆ ಅಂದಾಜು ವಿಧವನ್ನು ಪಡೆಯಿರಿ.",
 
     // Rice Varieties
-    varietiesTitle: "ಬೆಂಬಲಿತ ಅಕ್ಕಿಯ ವಿಧಗಳು",
-    varietiesSubtitle: "GrainVision AI ಗುರುತಿಸಬಹುದಾದ 8 ಅಕ್ಕಿ ವಿಧಗಳನ್ನು ನೋಡಿ.",
+    varietiesTitle: "ಬೆಂಬಲಿತ ಅಕ್ಕಿ ವಿಧಗಳು",
+    varietiesSubtitle: "GrainVision AI ಗುರುತಿಸಬಹುದಾದ ಅಕ್ಕಿ ವಿಧಗಳನ್ನು ನೋಡಿ.",
     btnViewAllVarieties: "ಎಲ್ಲಾ ವಿಧಗಳನ್ನು ನೋಡಿ",
 
     // Home - How It Works Preview

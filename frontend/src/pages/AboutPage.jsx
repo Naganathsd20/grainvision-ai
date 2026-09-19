@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wheat, Globe, Sparkles, Github, ShieldCheck, Eye, Layers, Monitor, ArrowRight } from 'lucide-react';
+import { Wheat, ShieldCheck, Eye, Layers, Monitor, ArrowRight } from 'lucide-react';
 import ClassCard from '../components/ClassCard';
 import { useLanguage } from '../i18n/LanguageContext';
 
@@ -10,61 +10,58 @@ export default function AboutPage({ navigate }) {
     {
       title: t('techCard1Title'),
       description: t('techCard1Desc'),
-      icon: Eye,
-      color: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20'
+      icon: Eye
     },
     {
       title: t('techCard2Title'),
       description: t('techCard2Desc'),
-      icon: Layers,
-      color: 'text-cyan-400 bg-cyan-500/10 border-cyan-500/20'
+      icon: Layers
     },
     {
       title: t('techCard3Title'),
       description: t('techCard3Desc'),
-      icon: Monitor,
-      color: 'text-purple-400 bg-purple-500/10 border-purple-500/20'
+      icon: Monitor
     }
   ];
 
   return (
-    <div className="space-y-16 sm:space-y-20 lg:space-y-24">
+    <div className="space-y-12 sm:space-y-16 lg:space-y-20">
       {/* HERO */}
-      <section className="text-center max-w-3xl mx-auto space-y-4">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+      <section className="text-center max-w-3xl mx-auto space-y-3">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
           {t('aboutPageTitle')}
         </h1>
-        <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+        <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
           {t('aboutPageSubtitle')}
         </p>
       </section>
 
       {/* ABOUT DESCRIPTION */}
-      <section className="glass-card rounded-3xl p-8 sm:p-10 border border-slate-800 bg-gradient-to-br from-slate-900 via-slate-900/90 to-slate-950 space-y-4">
-        <div className="flex items-center gap-2 text-emerald-400 text-xs font-semibold uppercase tracking-wider">
-          <ShieldCheck className="w-4 h-4" /> Overview
+      <section className="bg-white rounded-2xl p-8 sm:p-10 border border-slate-200 space-y-3.5 shadow-sm">
+        <div className="flex items-center gap-2 text-emerald-700 text-xs font-bold uppercase tracking-wider">
+          <ShieldCheck className="w-4 h-4 text-emerald-600" /> Overview
         </div>
 
-        <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
           {t('aboutWhatTitle')}
         </h2>
 
-        <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-3xl">
+        <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-3xl">
           {t('aboutWhatDesc')}
         </p>
       </section>
 
       {/* WHY IT EXISTS */}
-      <section className="glass-card rounded-3xl p-8 sm:p-10 border border-slate-800 bg-slate-900/60 space-y-4">
-        <div className="flex items-center gap-2 text-cyan-400 text-xs font-semibold uppercase tracking-wider">
-          <Wheat className="w-4 h-4" /> Purpose
+      <section className="bg-white rounded-2xl p-8 sm:p-10 border border-slate-200 space-y-3.5 shadow-sm">
+        <div className="flex items-center gap-2 text-emerald-700 text-xs font-bold uppercase tracking-wider">
+          <Wheat className="w-4 h-4 text-emerald-600" /> Purpose
         </div>
 
-        <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
           {t('aboutWhyTitle')}
         </h2>
 
-        <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-3xl">
+        <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-3xl">
           {t('aboutWhyDesc')}
         </p>
       </section>
@@ -74,13 +71,13 @@ export default function AboutPage({ navigate }) {
         <ClassCard />
       </section>
 
-      {/* TECHNOLOGY BEHIND GRAINVISION */}
+      {/* SYSTEM OVERVIEW */}
       <section className="space-y-6">
-        <div className="border-b border-slate-800 pb-4">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+        <div className="border-b border-slate-200 pb-4">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
             {t('techTitle')}
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base mt-1">
+          <p className="text-slate-600 text-sm sm:text-base mt-1">
             {t('techSubtitle')}
           </p>
         </div>
@@ -91,14 +88,14 @@ export default function AboutPage({ navigate }) {
             return (
               <div
                 key={card.title}
-                className="glass-card rounded-2xl p-6 sm:p-8 border border-slate-800 bg-slate-900/50 space-y-4 flex flex-col justify-between"
+                className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 space-y-4 flex flex-col justify-between shadow-sm"
               >
                 <div className="space-y-3">
-                  <div className={`w-12 h-12 rounded-2xl border ${card.color} flex items-center justify-center`}>
-                    <IconComponent className="w-6 h-6" />
+                  <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-200/80 text-emerald-700 flex items-center justify-center">
+                    <IconComponent className="w-5 h-5" />
                   </div>
-                  <h3 className="text-lg font-bold text-white">{card.title}</h3>
-                  <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                  <h3 className="text-lg font-bold text-slate-900">{card.title}</h3>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                     {card.description}
                   </p>
                 </div>
@@ -109,19 +106,19 @@ export default function AboutPage({ navigate }) {
       </section>
 
       {/* FINAL PRODUCT CTA */}
-      <section className="glass-card rounded-3xl p-8 sm:p-12 border border-slate-800 bg-gradient-to-r from-slate-900 via-emerald-950/30 to-slate-900 text-center space-y-6">
-        <div className="max-w-2xl mx-auto space-y-3">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+      <section className="bg-emerald-50/80 rounded-2xl p-8 sm:p-12 border border-emerald-200/80 text-center space-y-6 shadow-sm">
+        <div className="max-w-2xl mx-auto space-y-2.5">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             {t('finalCtaTitle')}
           </h2>
-          <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+          <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
             {t('finalCtaSubtitle')}
           </p>
         </div>
 
         <button
           onClick={() => navigate('/analyzer')}
-          className="px-8 py-4 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-base transition-all shadow-xl shadow-emerald-500/25 inline-flex items-center gap-2"
+          className="px-7 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-base transition-all shadow-sm inline-flex items-center gap-2"
         >
           <span>{t('btnAnalyzeRicePhoto')}</span>
           <ArrowRight className="w-5 h-5" />

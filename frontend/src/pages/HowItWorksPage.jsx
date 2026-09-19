@@ -1,5 +1,5 @@
 import React from 'react';
-import { Upload, Sliders, Eye, CheckCircle2, HelpCircle, ArrowRight, Sun, ShieldCheck } from 'lucide-react';
+import { Upload, Eye, CheckCircle2, HelpCircle, ArrowRight, Sun, BookOpen } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
 
 export default function HowItWorksPage({ navigate }) {
@@ -11,21 +11,21 @@ export default function HowItWorksPage({ navigate }) {
       title: t('step1FullTitle'),
       description: t('step1FullDesc'),
       icon: Upload,
-      color: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20'
+      color: 'text-emerald-700 bg-emerald-50 border-emerald-200/80'
     },
     {
       num: '02',
       title: t('step2FullTitle'),
       description: t('step2FullDesc'),
       icon: Eye,
-      color: 'text-cyan-400 bg-cyan-500/10 border-cyan-500/20'
+      color: 'text-emerald-700 bg-emerald-50 border-emerald-200/80'
     },
     {
       num: '03',
       title: t('step3FullTitle'),
       description: t('step3FullDesc'),
       icon: CheckCircle2,
-      color: 'text-purple-400 bg-purple-500/10 border-purple-500/20'
+      color: 'text-emerald-700 bg-emerald-50 border-emerald-200/80'
     }
   ];
 
@@ -39,24 +39,24 @@ export default function HowItWorksPage({ navigate }) {
   ];
 
   return (
-    <div className="space-y-16 sm:space-y-20 lg:space-y-24">
+    <div className="space-y-12 sm:space-y-16 lg:space-y-20">
       {/* HERO */}
-      <section className="text-center max-w-3xl mx-auto space-y-4">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+      <section className="text-center max-w-3xl mx-auto space-y-3">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
           {t('howItWorksPageTitle')}
         </h1>
-        <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+        <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
           {t('howItWorksPageSubtitle')}
         </p>
       </section>
 
       {/* 3 STEPS GRID */}
       <section className="space-y-6">
-        <div className="border-b border-slate-800 pb-4">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+        <div className="border-b border-slate-200 pb-4">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
             {t('processTitle')}
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base mt-1">
+          <p className="text-slate-600 text-sm sm:text-base mt-1">
             {t('processSubtitle')}
           </p>
         </div>
@@ -67,23 +67,23 @@ export default function HowItWorksPage({ navigate }) {
             return (
               <div
                 key={step.num}
-                className="glass-card rounded-3xl p-6 sm:p-8 border border-slate-800 bg-slate-900/60 space-y-4 flex flex-col justify-between"
+                className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 space-y-4 flex flex-col justify-between shadow-sm"
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-mono font-bold text-slate-400 px-3 py-1 rounded-full bg-slate-800 border border-slate-700">
+                    <span className="text-xs font-mono font-bold text-slate-500 px-3 py-1 rounded-full bg-slate-100 border border-slate-200">
                       STEP {step.num}
                     </span>
-                    <div className={`w-12 h-12 rounded-2xl border ${step.color} flex items-center justify-center`}>
-                      <IconComponent className="w-6 h-6" />
+                    <div className={`w-10 h-10 rounded-xl border ${step.color} flex items-center justify-center`}>
+                      <IconComponent className="w-5 h-5" />
                     </div>
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+                  <h3 className="text-xl font-bold text-slate-900 tracking-tight">
                     {step.title}
                   </h3>
 
-                  <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
                     {step.description}
                   </p>
                 </div>
@@ -94,16 +94,16 @@ export default function HowItWorksPage({ navigate }) {
       </section>
 
       {/* FOR BETTER RESULTS */}
-      <section className="glass-card rounded-3xl p-8 sm:p-10 border border-slate-800 bg-gradient-to-br from-slate-900 via-slate-900/90 to-slate-950 space-y-6">
-        <div className="flex items-center gap-2 text-emerald-400 text-xs font-semibold uppercase tracking-wider">
-          <Sun className="w-4 h-4" /> Guidance
+      <section className="bg-white rounded-2xl p-8 sm:p-10 border border-slate-200 space-y-6 shadow-sm">
+        <div className="flex items-center gap-2 text-emerald-700 text-xs font-bold uppercase tracking-wider">
+          <Sun className="w-4 h-4 text-emerald-600" /> Guidance
         </div>
 
         <div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
             {t('forBetterResultsTitle')}
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base mt-1">
+          <p className="text-slate-600 text-sm sm:text-base mt-1">
             {t('forBetterResultsSubtitle')}
           </p>
         </div>
@@ -112,9 +112,9 @@ export default function HowItWorksPage({ navigate }) {
           {tips.map((tip, idx) => (
             <div
               key={idx}
-              className="p-4 rounded-2xl border border-slate-800 bg-slate-950/60 text-slate-300 text-xs sm:text-sm font-medium flex items-center gap-3"
+              className="p-4 rounded-xl border border-slate-200 bg-slate-50 text-slate-700 text-xs sm:text-sm font-medium flex items-center gap-3"
             >
-              <span className="w-2 h-2 rounded-full bg-emerald-400 shrink-0"></span>
+              <span className="w-2 h-2 rounded-full bg-emerald-600 shrink-0"></span>
               <span>{tip}</span>
             </div>
           ))}
@@ -122,23 +122,23 @@ export default function HowItWorksPage({ navigate }) {
       </section>
 
       {/* UNDERSTANDING CONFIDENCE */}
-      <section className="glass-card rounded-3xl p-8 sm:p-10 border border-slate-800 bg-slate-900/60 space-y-4">
-        <div className="flex items-center gap-2 text-cyan-400 text-xs font-semibold uppercase tracking-wider">
-          <HelpCircle className="w-4 h-4" /> Explanation
+      <section className="bg-white rounded-2xl p-8 sm:p-10 border border-slate-200 space-y-4 shadow-sm">
+        <div className="flex items-center gap-2 text-emerald-700 text-xs font-bold uppercase tracking-wider">
+          <HelpCircle className="w-4 h-4 text-emerald-600" /> Explanation
         </div>
 
-        <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
           {t('confidenceMeaningTitle')}
         </h2>
 
-        <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-3xl">
+        <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-3xl">
           {t('confidenceMeaningDesc')}
         </p>
 
         <div className="pt-4 flex items-center gap-4">
           <button
             onClick={() => navigate('/analyzer')}
-            className="px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-emerald-500/20 flex items-center gap-2"
+            className="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition-all shadow-sm flex items-center gap-2"
           >
             <span>{t('btnTryAnalyzer')}</span>
             <ArrowRight className="w-4 h-4" />
