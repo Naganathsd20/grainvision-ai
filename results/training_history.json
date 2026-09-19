@@ -1,0 +1,61 @@
+{
+  "dataset_scope": "Balanced Representative Subset (Quick CPU Training)",
+  "full_dataset_total_images": 75000,
+  "subset_train_images": 600,
+  "subset_val_images": 100,
+  "class_distribution_train": {
+    "Arborio": 120,
+    "Basmati": 120,
+    "Ipsala": 120,
+    "Jasmine": 120,
+    "Karacadag": 120
+  },
+  "class_distribution_val": {
+    "Arborio": 20,
+    "Basmati": 20,
+    "Ipsala": 20,
+    "Jasmine": 20,
+    "Karacadag": 20
+  },
+  "num_classes": 5,
+  "class_names": [
+    "Arborio",
+    "Basmati",
+    "Ipsala",
+    "Jasmine",
+    "Karacadag"
+  ],
+  "hardware": "CPU (Native Windows x86_64)",
+  "total_epochs_completed": 2,
+  "best_epoch": 1,
+  "best_metrics": {
+    "train_loss": 0.4624,
+    "train_accuracy": 0.8317,
+    "val_loss": 0.7591,
+    "val_accuracy": 0.76
+  },
+  "fine_tuning_applied": false,
+  "training_duration_seconds": 72.19,
+  "history": {
+    "loss": [
+      0.4624333679676056,
+      0.12503312528133392
+    ],
+    "accuracy": [
+      0.8316666483879089,
+      0.9666666388511658
+    ],
+    "val_loss": [
+      0.7590644955635071,
+      0.9968847632408142
+    ],
+    "val_accuracy": [
+      0.7599999904632568,
+      0.7599999904632568
+    ],
+    "lr": [
+      0.0010000000474974513,
+      0.0010000000474974513
+    ]
+  }
+}

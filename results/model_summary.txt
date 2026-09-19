@@ -1,0 +1,42 @@
+==================================================
+GrainVision AI — Model Summary Report
+Phase 4: Deep Learning Model Architecture
+==================================================
+Model Name           : GrainVision_MobileNetV2
+Backbone             : MobileNetV2 (ImageNet Pre-trained)
+Backbone Trainable   : False (Frozen for Transfer Learning)
+Input Geometry       : (224, 224, 3)
+Output Classes       : 5 (Arborio, Basmati, Ipsala, Jasmine, Karacadag)
+Loss Function        : sparse_categorical_crossentropy
+Optimizer            : adam (lr=0.001)
+Metrics              : accuracy
+--------------------------------------------------
+Total Parameters     : 2,592,325
+Trainable Parameters : 331,781
+Non-Trainable Params : 2,260,544
+==================================================
+
+Model: "GrainVision_MobileNetV2"
++--------------------------------------------------------------------------+
+| Layer (type)                    | Output Shape           |       Param # |
+|---------------------------------+------------------------+---------------|
+| image_input (InputLayer)        | (None, 224, 224, 3)    |             0 |
+|---------------------------------+------------------------+---------------|
+| mobilenetv2_1.00_224            | (None, 7, 7, 1280)     |     2,257,984 |
+| (Functional)                    |                        |               |
+|---------------------------------+------------------------+---------------|
+| global_avg_pool                 | (None, 1280)           |             0 |
+| (GlobalAveragePooling2D)        |                        |               |
+|---------------------------------+------------------------+---------------|
+| batch_norm (BatchNormalization) | (None, 1280)           |         5,120 |
+|---------------------------------+------------------------+---------------|
+| dense_feature_head (Dense)      | (None, 256)            |       327,936 |
+|---------------------------------+------------------------+---------------|
+| dropout_head (Dropout)          | (None, 256)            |             0 |
+|---------------------------------+------------------------+---------------|
+| classification_head (Dense)     | (None, 5)              |         1,285 |
++--------------------------------------------------------------------------+
+ Total params: 2,592,325 (9.89 MB)
+ Trainable params: 331,781 (1.27 MB)
+ Non-trainable params: 2,260,544 (8.62 MB)
+

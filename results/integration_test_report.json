@@ -1,0 +1,152 @@
+{
+  "project": "GrainVision AI",
+  "phase": "Phase 9 \u2014 Integration & Testing",
+  "timestamp": "2026-09-16 19:33:39",
+  "total_tests": 10,
+  "passed_tests": 10,
+  "test_results": [
+    {
+      "test_number": 1,
+      "title": "Project Structure Audit",
+      "passed": true,
+      "details": "Dirs verified: 6, Files verified: 8"
+    },
+    {
+      "test_number": 2,
+      "title": "Backend Health Check (GET /api/health)",
+      "passed": true,
+      "details": "HTTP 200 | Phase: Phase 7 - Backend & Prediction API | Status: ok"
+    },
+    {
+      "test_number": 3,
+      "title": "Model Artifact Loading & Softmax Output",
+      "passed": true,
+      "details": "Model Size: 13.0 MB | Output Shape: (1, 5) | Softmax Valid: True"
+    },
+    {
+      "test_number": 4,
+      "title": "API Predictions on 5 Real Class Images",
+      "passed": true,
+      "details": "Evaluated 5 classes | Passed: 5/5"
+    },
+    {
+      "test_number": 5,
+      "title": "Frontend API Integration Helper Audit",
+      "passed": true,
+      "details": "FormData & POST /api/predict correctly configured in frontend service & components"
+    },
+    {
+      "test_number": 6,
+      "title": "File Validation & Controlled Error Responses",
+      "passed": true,
+      "details": "Missing file: 400 | Invalid ext: 415 | Empty file: 400"
+    },
+    {
+      "test_number": 7,
+      "title": "Backend Server Unreachable Error Handling",
+      "passed": true,
+      "details": "Frontend displays user-friendly connection error message when Flask server is offline"
+    },
+    {
+      "test_number": 8,
+      "title": "Frontend Production Vite Build",
+      "passed": true,
+      "details": "Vite Build Return Code: 0 | Output dist/index.html present"
+    },
+    {
+      "test_number": 9,
+      "title": "Responsive UI & Tailwind CSS Layout Audit",
+      "passed": true,
+      "details": "Breakpoints (mobile grid-cols-1, desktop lg:grid-cols-2, max-w-7xl) configured for zero horizontal scroll"
+    },
+    {
+      "test_number": 10,
+      "title": "Phase 1-8 Regression & Git Safety Audit",
+      "passed": true,
+      "details": ".gitignore Dataset Protection: True | Previous Phase Artifacts Intact: True"
+    }
+  ],
+  "real_image_predictions": [
+    {
+      "true_class": "Arborio",
+      "sample_image": "Arborio (10002).jpg",
+      "http_status": 200,
+      "predicted_class": "Arborio",
+      "confidence": 0.8386,
+      "confidence_percentage": "83.86%",
+      "probabilities": {
+        "Arborio": 0.8386,
+        "Basmati": 0.0007,
+        "Ipsala": 0.0717,
+        "Jasmine": 0.0874,
+        "Karacadag": 0.0016
+      },
+      "match": true
+    },
+    {
+      "true_class": "Basmati",
+      "sample_image": "basmati (10000).jpg",
+      "http_status": 200,
+      "predicted_class": "Jasmine",
+      "confidence": 0.9848,
+      "confidence_percentage": "98.48%",
+      "probabilities": {
+        "Arborio": 0.0002,
+        "Basmati": 0.0104,
+        "Ipsala": 0.0046,
+        "Jasmine": 0.9848,
+        "Karacadag": 0.0
+      },
+      "match": false
+    },
+    {
+      "true_class": "Ipsala",
+      "sample_image": "Ipsala (100).jpg",
+      "http_status": 200,
+      "predicted_class": "Ipsala",
+      "confidence": 0.9775,
+      "confidence_percentage": "97.75%",
+      "probabilities": {
+        "Arborio": 0.0036,
+        "Basmati": 0.0,
+        "Ipsala": 0.9775,
+        "Jasmine": 0.0187,
+        "Karacadag": 0.0001
+      },
+      "match": true
+    },
+    {
+      "true_class": "Jasmine",
+      "sample_image": "Jasmine (10000).jpg",
+      "http_status": 200,
+      "predicted_class": "Jasmine",
+      "confidence": 0.8919,
+      "confidence_percentage": "89.19%",
+      "probabilities": {
+        "Arborio": 0.0103,
+        "Basmati": 0.0294,
+        "Ipsala": 0.0679,
+        "Jasmine": 0.8919,
+        "Karacadag": 0.0005
+      },
+      "match": true
+    },
+    {
+      "true_class": "Karacadag",
+      "sample_image": "Karacadag (10000).jpg",
+      "http_status": 200,
+      "predicted_class": "Karacadag",
+      "confidence": 0.7211,
+      "confidence_percentage": "72.11%",
+      "probabilities": {
+        "Arborio": 0.073,
+        "Basmati": 0.0001,
+        "Ipsala": 0.1815,
+        "Jasmine": 0.0243,
+        "Karacadag": 0.7211
+      },
+      "match": true
+    }
+  ],
+  "execution_duration_seconds": 8.65
+}

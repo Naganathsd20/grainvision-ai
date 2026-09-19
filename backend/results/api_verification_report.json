@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-09-16 19:30:44",
+  "timestamp": "2026-09-18 21:51:34",
   "phase": "Phase 7 - Backend & Prediction API",
-  "passed_tests": 4,
-  "total_tests": 4,
+  "passed_tests": 11,
+  "total_tests": 11,
   "tests": [
     {
       "test_name": "GET /api/health",
@@ -14,32 +14,207 @@
           "Basmati",
           "Ipsala",
           "Jasmine",
-          "Karacadag"
+          "Jhili",
+          "Karacadag",
+          "Massori",
+          "SonaMasoori"
         ],
         "phase": "Phase 7 - Backend & Prediction API",
         "project": "GrainVision AI",
         "status": "ok",
         "subtitle": "Intelligent Rice Grain Classification Using Deep Learning",
-        "timestamp": 1789567244,
+        "timestamp": 1789748494,
         "version": "1.0.0"
       }
     },
     {
-      "test_name": "POST /api/predict (Valid Real Image)",
+      "test_name": "POST /api/predict (Arborio)",
       "status_code": 200,
       "passed": true,
-      "test_image_used": "F:\\grainvision-ai\\ml\\dataset\\processed\\test\\Arborio\\Arborio (10002).jpg",
+      "class_tested": "Arborio",
+      "test_image_used": "F:\\grainvision-ai\\ml\\dataset\\processed_8class\\test\\Arborio\\Arborio (10084).jpg",
       "response": {
         "prediction": {
           "class": "Arborio",
-          "confidence": 0.8386
+          "confidence": 1.0
         },
         "probabilities": {
-          "Arborio": 0.8386,
-          "Basmati": 0.0007,
-          "Ipsala": 0.0717,
-          "Jasmine": 0.0874,
-          "Karacadag": 0.0016
+          "Arborio": 1.0,
+          "Basmati": 0.0,
+          "Ipsala": 0.0,
+          "Jasmine": 0.0,
+          "Jhili": 0.0,
+          "Karacadag": 0.0,
+          "Massori": 0.0,
+          "SonaMasoori": 0.0
+        },
+        "success": true
+      }
+    },
+    {
+      "test_name": "POST /api/predict (Basmati)",
+      "status_code": 200,
+      "passed": true,
+      "class_tested": "Basmati",
+      "test_image_used": "F:\\grainvision-ai\\ml\\dataset\\processed_8class\\test\\Basmati\\basmati (10457).jpg",
+      "response": {
+        "prediction": {
+          "class": "Basmati",
+          "confidence": 0.9705
+        },
+        "probabilities": {
+          "Arborio": 0.0,
+          "Basmati": 0.9705,
+          "Ipsala": 0.0,
+          "Jasmine": 0.0295,
+          "Jhili": 0.0,
+          "Karacadag": 0.0,
+          "Massori": 0.0,
+          "SonaMasoori": 0.0
+        },
+        "success": true
+      }
+    },
+    {
+      "test_name": "POST /api/predict (Ipsala)",
+      "status_code": 200,
+      "passed": true,
+      "class_tested": "Ipsala",
+      "test_image_used": "F:\\grainvision-ai\\ml\\dataset\\processed_8class\\test\\Ipsala\\Ipsala (10117).jpg",
+      "response": {
+        "prediction": {
+          "class": "Ipsala",
+          "confidence": 1.0
+        },
+        "probabilities": {
+          "Arborio": 0.0,
+          "Basmati": 0.0,
+          "Ipsala": 1.0,
+          "Jasmine": 0.0,
+          "Jhili": 0.0,
+          "Karacadag": 0.0,
+          "Massori": 0.0,
+          "SonaMasoori": 0.0
+        },
+        "success": true
+      }
+    },
+    {
+      "test_name": "POST /api/predict (Jasmine)",
+      "status_code": 200,
+      "passed": true,
+      "class_tested": "Jasmine",
+      "test_image_used": "F:\\grainvision-ai\\ml\\dataset\\processed_8class\\test\\Jasmine\\Jasmine (10074).jpg",
+      "response": {
+        "prediction": {
+          "class": "Jasmine",
+          "confidence": 0.9999
+        },
+        "probabilities": {
+          "Arborio": 0.0,
+          "Basmati": 0.0001,
+          "Ipsala": 0.0,
+          "Jasmine": 0.9999,
+          "Jhili": 0.0,
+          "Karacadag": 0.0,
+          "Massori": 0.0,
+          "SonaMasoori": 0.0
+        },
+        "success": true
+      }
+    },
+    {
+      "test_name": "POST /api/predict (Jhili)",
+      "status_code": 200,
+      "passed": true,
+      "class_tested": "Jhili",
+      "test_image_used": "F:\\grainvision-ai\\ml\\dataset\\processed_8class\\test\\Jhili\\Jhili_0024.jpg",
+      "response": {
+        "prediction": {
+          "class": "Jhili",
+          "confidence": 1.0
+        },
+        "probabilities": {
+          "Arborio": 0.0,
+          "Basmati": 0.0,
+          "Ipsala": 0.0,
+          "Jasmine": 0.0,
+          "Jhili": 1.0,
+          "Karacadag": 0.0,
+          "Massori": 0.0,
+          "SonaMasoori": 0.0
+        },
+        "success": true
+      }
+    },
+    {
+      "test_name": "POST /api/predict (Karacadag)",
+      "status_code": 200,
+      "passed": true,
+      "class_tested": "Karacadag",
+      "test_image_used": "F:\\grainvision-ai\\ml\\dataset\\processed_8class\\test\\Karacadag\\Karacadag (10058).jpg",
+      "response": {
+        "prediction": {
+          "class": "Karacadag",
+          "confidence": 0.9992
+        },
+        "probabilities": {
+          "Arborio": 0.0008,
+          "Basmati": 0.0,
+          "Ipsala": 0.0,
+          "Jasmine": 0.0,
+          "Jhili": 0.0,
+          "Karacadag": 0.9992,
+          "Massori": 0.0,
+          "SonaMasoori": 0.0
+        },
+        "success": true
+      }
+    },
+    {
+      "test_name": "POST /api/predict (Massori)",
+      "status_code": 200,
+      "passed": true,
+      "class_tested": "Massori",
+      "test_image_used": "F:\\grainvision-ai\\ml\\dataset\\processed_8class\\test\\Massori\\Massori_0109.png",
+      "response": {
+        "prediction": {
+          "class": "Massori",
+          "confidence": 1.0
+        },
+        "probabilities": {
+          "Arborio": 0.0,
+          "Basmati": 0.0,
+          "Ipsala": 0.0,
+          "Jasmine": 0.0,
+          "Jhili": 0.0,
+          "Karacadag": 0.0,
+          "Massori": 1.0,
+          "SonaMasoori": 0.0
+        },
+        "success": true
+      }
+    },
+    {
+      "test_name": "POST /api/predict (SonaMasoori)",
+      "status_code": 200,
+      "passed": true,
+      "class_tested": "SonaMasoori",
+      "test_image_used": "F:\\grainvision-ai\\ml\\dataset\\processed_8class\\test\\SonaMasoori\\SonaMasoori_00012.png",
+      "response": {
+        "prediction": {
+          "class": "SonaMasoori",
+          "confidence": 1.0
+        },
+        "probabilities": {
+          "Arborio": 0.0,
+          "Basmati": 0.0,
+          "Ipsala": 0.0,
+          "Jasmine": 0.0,
+          "Jhili": 0.0,
+          "Karacadag": 0.0,
+          "Massori": 0.0,
+          "SonaMasoori": 1.0
         },
         "success": true
       }

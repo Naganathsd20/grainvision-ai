@@ -1,0 +1,9 @@
+GrainVision AI — 8-Class Model Training Summary
+==================================================
+Model File: F:\grainvision-ai\models\grainvision_milled_rice_8class_best.keras
+Classes (8): Arborio, Basmati, Ipsala, Jasmine, Jhili, Karacadag, Massori, SonaMasoori
+Epochs Completed: 5
+Training Duration: 979.86s (16.33m)
+Final Training Accuracy: 0.9727
+Final Validation Accuracy: 0.9775
+Best Validation Accuracy: 0.9775

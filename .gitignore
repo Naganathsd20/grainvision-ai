@@ -36,16 +36,22 @@ yarn-error.log*
 # Datasets & Heavy ML Artifacts
 ml/dataset/raw/*
 !ml/dataset/raw/.gitkeep
+ml/dataset/raw_milled/*
+ml/dataset/downloads/*
 ml/dataset/processed/*
 !ml/dataset/processed/.gitkeep
+ml/dataset/processed_8class/*
 models/*.h5
-models/*.keras
 models/*.pth
 models/*.onnx
 !models/.gitkeep
+!models/grainvision_mobilenetv2_best.keras
+!models/grainvision_milled_rice_8class_best.keras
 results/*
 !results/.gitkeep
 !results/*.png
+!results/*.json
+!results/*.txt
 
 # Jupyter Notebook Checkpoints
 .ipynb_checkpoints/

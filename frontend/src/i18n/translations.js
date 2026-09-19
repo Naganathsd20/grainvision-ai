@@ -87,6 +87,17 @@ export const translations = {
     analysisModeValue: "Visual Grain Recognition",
     analysisNoticeTitle: "Analysis Notice",
 
+    // About This Rice Section
+    aboutThisRiceTitle: "About This Rice",
+    whySpecialTitle: "Why It's Special",
+    howGrownTitle: "How It's Commonly Grown",
+    commonUsesTitle: "Common Uses",
+    popularDishesTitle: "Popular Dishes",
+    characteristicsTitle: "Characteristics",
+    grainTypeLabel: "Grain Type",
+    textureLabel: "Cooked Texture",
+    aromaLabel: "Aroma Profile",
+
     // How It Works Page
     howItWorksPageTitle: "How It Works",
     howItWorksPageSubtitle: "Simple steps to identify your rice variety.",
@@ -255,6 +266,17 @@ export const translations = {
     analysisModeValue: "दृश्य दाना पहचान",
     analysisNoticeTitle: "विश्लेषण सूचना",
 
+    // About This Rice Section
+    aboutThisRiceTitle: "इस चावल के बारे में",
+    whySpecialTitle: "यह क्यों खास है",
+    howGrownTitle: "इसकी खेती कैसे होती है",
+    commonUsesTitle: "सामान्य उपयोग",
+    popularDishesTitle: "लोकप्रिय व्यंजन",
+    characteristicsTitle: "विशेषताएं",
+    grainTypeLabel: "दाना का प्रकार",
+    textureLabel: "पकाने के बाद बनावट",
+    aromaLabel: "सुगंध",
+
     // How It Works Page
     howItWorksPageTitle: "यह कैसे काम करता है",
     howItWorksPageSubtitle: "आपके चावल की किस्म पहचानने के सरल चरण।",
@@ -422,6 +444,17 @@ export const translations = {
     analysisModeLabel: "ವಿಶ್ಲೇಷಣಾ ವಿಧಾನ:",
     analysisModeValue: "ಗೋಚರ ಕಾಳುಗಳ ಗುರುತಿಸುವಿಕೆ",
     analysisNoticeTitle: "ವಿಶ್ಲೇಷಣಾ ಸೂಚನೆ",
+
+    // About This Rice Section
+    aboutThisRiceTitle: "ಈ ಅಕ್ಕಿಯ ಬಗ್ಗೆ",
+    whySpecialTitle: "ಇದು ಏಕೆ ವಿಶೇಷ",
+    howGrownTitle: "ಇದನ್ನು ಸಾಮಾನ್ಯವಾಗಿ ಹೇಗೆ ಬೆಳೆಯಲಾಗುತ್ತದೆ",
+    commonUsesTitle: "ಸಾಮಾನ್ಯ ಬಳಕೆಗಳು",
+    popularDishesTitle: "ಜನಪ್ರಿಯ ಖಾದ್ಯಗಳು",
+    characteristicsTitle: "ಲಕ್ಷಣಗಳು",
+    grainTypeLabel: "ಅಕ್ಕಿ ಧಾನ್ಯದ ಮಾದರಿ",
+    textureLabel: "ಬೇಯಿಸಿದ ನಂತರದ ಹದ",
+    aromaLabel: "ಸುವಾಸನೆ",
 
     // How It Works Page
     howItWorksPageTitle: "ಇದು ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ",

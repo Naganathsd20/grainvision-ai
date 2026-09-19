@@ -1,0 +1,35 @@
+==================================================
+GrainVision AI — Phase 5 Model Training Summary
+==================================================
+
+Execution Timestamp   : 2026-09-16 18:53:29
+Hardware Environment  : CPU (Native Windows x86_64)
+Dataset Strategy      : Balanced Representative Subset (Dynamic Deterministic Sampling, Seed 42)
+Training Subset       : 600 real images (120 per class)
+Validation Subset     : 100 real images (20 per class)
+Classes (5)           : Arborio, Basmati, Ipsala, Jasmine, Karacadag
+Model Architecture    : MobileNetV2 (ImageNet pretrained + Custom Dense Head)
+Batch Size            : 32
+Image Input Shape     : (224, 224, 3)
+
+--------------------------------------------------
+TRAINING PERFORMANCE METRICS
+--------------------------------------------------
+Epochs Completed      : 2 / 3
+Best Epoch            : Epoch 1
+Best Training Accuracy: 0.8317 (83.17%)
+Best Training Loss    : 0.4624
+Best Validation Acc   : 0.7600 (76.00%)
+Best Validation Loss  : 0.7591
+Fine-Tuning Applied   : NO
+Training Duration     : 1m 12s (72.19s)
+
+--------------------------------------------------
+ARTIFACT LOCATIONS
+--------------------------------------------------
+Best Trained Model    : F:\grainvision-ai\models\grainvision_mobilenetv2_best.keras
+Training History JSON : F:\grainvision-ai\results\training_history.json
+Accuracy Plot PNG     : F:\grainvision-ai\results\training_accuracy.png
+Loss Plot PNG         : F:\grainvision-ai\results\training_loss.png
+Summary Text          : F:\grainvision-ai\results\training_summary.txt
+==================================================

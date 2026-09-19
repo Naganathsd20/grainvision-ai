@@ -1,0 +1,23 @@
+GrainVision AI — 8-Class Test Set Evaluation Report
+============================================================
+Model File: F:\grainvision-ai\models\grainvision_milled_rice_8class_best.keras
+Test Set Size: 1200 images (8 classes x 150 images)
+Test Accuracy: 97.17%
+Macro F1-Score: 0.9717
+Weighted F1-Score: 0.9717
+
+Classification Report:
+              precision    recall  f1-score   support
+
+     Arborio     0.8929    1.0000    0.9434       150
+     Basmati     0.9789    0.9267    0.9521       150
+      Ipsala     1.0000    0.9867    0.9933       150
+     Jasmine     0.9187    0.9800    0.9484       150
+       Jhili     1.0000    1.0000    1.0000       150
+   Karacadag     1.0000    0.8800    0.9362       150
+     Massori     1.0000    1.0000    1.0000       150
+ SonaMasoori     1.0000    1.0000    1.0000       150
+
+    accuracy                         0.9717      1200
+   macro avg     0.9738    0.9717    0.9717      1200
+weighted avg     0.9738    0.9717    0.9717      1200

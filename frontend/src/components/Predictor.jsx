@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import { predictRiceGrain } from '../services/api';
 import { useLanguage } from '../i18n/LanguageContext';
+import AboutRiceSection from './AboutRiceSection';
 
 const ALLOWED_EXTENSIONS = ['jpg', 'jpeg', 'png', 'webp'];
 const MAX_FILE_SIZE_MB = 10;
@@ -171,9 +172,9 @@ export default function Predictor() {
       )}
 
       {/* MAIN TWO-COLUMN WORKFLOW GRID */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start">
         {/* COLUMN 1: UPLOAD & PREVIEW AREA */}
-        <div className="space-y-5 flex flex-col justify-between">
+        <div className="space-y-5">
           <div
             onDragEnter={handleDrag}
             onDragLeave={handleDrag}
@@ -269,6 +270,11 @@ export default function Predictor() {
               </>
             )}
           </button>
+
+          {/* Educational Rice Info Section */}
+          {predictionResult && (
+            <AboutRiceSection predictedClass={predictionResult.prediction.class} />
+          )}
         </div>
 
         {/* COLUMN 2: INFERENCE RESULTS & PROBABILITIES */}

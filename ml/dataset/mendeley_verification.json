@@ -1,0 +1,24 @@
+{
+  "class_root": "F:\\grainvision-ai\\ml\\dataset\\raw_milled\\c5y6gjwdzh-1\\image_Dataset",
+  "classes": [
+    "Arborio",
+    "Basmati",
+    "Ipsala",
+    "Jasmine",
+    "Jhili",
+    "Karacadag",
+    "Massori",
+    "SonaMasoori"
+  ],
+  "class_counts": {
+    "Arborio": 15000,
+    "Basmati": 15000,
+    "Ipsala": 15000,
+    "Jasmine": 15000,
+    "Jhili": 15000,
+    "Karacadag": 15000,
+    "Massori": 15000,
+    "SonaMasoori": 15000
+  },
+  "corrupted_files": []
+}

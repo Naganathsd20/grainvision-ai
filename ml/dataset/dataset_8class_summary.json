@@ -1,0 +1,54 @@
+{
+  "seed": 42,
+  "total_images": 8000,
+  "classes": {
+    "Arborio": {
+      "train": 700,
+      "validation": 150,
+      "test": 150,
+      "total": 1000
+    },
+    "Basmati": {
+      "train": 700,
+      "validation": 150,
+      "test": 150,
+      "total": 1000
+    },
+    "Ipsala": {
+      "train": 700,
+      "validation": 150,
+      "test": 150,
+      "total": 1000
+    },
+    "Jasmine": {
+      "train": 700,
+      "validation": 150,
+      "test": 150,
+      "total": 1000
+    },
+    "Jhili": {
+      "train": 700,
+      "validation": 150,
+      "test": 150,
+      "total": 1000
+    },
+    "Karacadag": {
+      "train": 700,
+      "validation": 150,
+      "test": 150,
+      "total": 1000
+    },
+    "Massori": {
+      "train": 700,
+      "validation": 150,
+      "test": 150,
+      "total": 1000
+    },
+    "SonaMasoori": {
+      "train": 700,
+      "validation": 150,
+      "test": 150,
+      "total": 1000
+    }
+  }
+}

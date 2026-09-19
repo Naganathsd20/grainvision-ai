@@ -11,12 +11,12 @@ class Config:
     PORT = int(os.environ.get("PORT", 5000))
     DEBUG = os.environ.get("FLASK_DEBUG", "True").lower() in ("true", "1")
     
-    # Target Rice Classes (5 Categories)
-    RICE_CLASSES = ["Arborio", "Basmati", "Ipsala", "Jasmine", "Karacadag"]
+    # Target Rice Classes (8 Verified Dataset Categories)
+    RICE_CLASSES = ["Arborio", "Basmati", "Ipsala", "Jasmine", "Jhili", "Karacadag", "Massori", "SonaMasoori"]
     
     # Model Configuration
     PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-    MODEL_PATH = os.path.join(PROJECT_ROOT, "models", "grainvision_mobilenetv2_best.keras")
+    MODEL_PATH = os.path.join(PROJECT_ROOT, "models", "grainvision_milled_rice_8class_best.keras")
     TARGET_IMAGE_SIZE = (224, 224)
     
     # Upload limits & security

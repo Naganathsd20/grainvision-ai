@@ -1,0 +1,61 @@
+{
+  "model_path": "F:\\grainvision-ai\\models\\grainvision_milled_rice_8class_best.keras",
+  "test_images_total": 1200,
+  "test_accuracy": 0.9717,
+  "macro_precision": 0.9738,
+  "macro_recall": 0.9717,
+  "macro_f1_score": 0.9717,
+  "weighted_precision": 0.9738,
+  "weighted_recall": 0.9717,
+  "weighted_f1_score": 0.9717,
+  "per_class_metrics": {
+    "Arborio": {
+      "precision": 0.8929,
+      "recall": 1.0,
+      "f1_score": 0.9434,
+      "support": 150
+    },
+    "Basmati": {
+      "precision": 0.9789,
+      "recall": 0.9267,
+      "f1_score": 0.9521,
+      "support": 150
+    },
+    "Ipsala": {
+      "precision": 1.0,
+      "recall": 0.9867,
+      "f1_score": 0.9933,
+      "support": 150
+    },
+    "Jasmine": {
+      "precision": 0.9187,
+      "recall": 0.98,
+      "f1_score": 0.9484,
+      "support": 150
+    },
+    "Jhili": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 150
+    },
+    "Karacadag": {
+      "precision": 1.0,
+      "recall": 0.88,
+      "f1_score": 0.9362,
+      "support": 150
+    },
+    "Massori": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 150
+    },
+    "SonaMasoori": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 150
+    }
+  }
+}
